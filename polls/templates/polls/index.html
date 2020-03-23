@@ -1,6 +1,9 @@
 {% load static %}
 
+
 <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
+
+<a href="{% url 'polls:new' %}"/> New Poll </a>
 
 {% if latest_question_list %}
     <ul>

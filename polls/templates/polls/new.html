@@ -1,0 +1,12 @@
+<form action="{% url 'polls:new' %}" method="post">
+    {% csrf_token %}
+    {{ form }}
+
+    {{ choice_formset.management_form }}
+    <p>
+    {% for f in choice_formset %}
+      {{ f }}
+    {% endfor %}
+    </p>
+    <input type="submit" value="Submit">
+</form>
